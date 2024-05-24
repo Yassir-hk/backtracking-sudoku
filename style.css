@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#sudoku-grid {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  border: 2px solid black;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.col-edge {
+  border-right: 2px solid black;
+}
+
+.row-edge {
+  border-bottom: 2px solid black;
+}
+
+.selected, .cell:hover {
+  background: rgb(228, 244, 255);
+}
+
+.wrong {
+  background: rgba(255, 207, 215, 0.8);
+}
+
+button, select {
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin: 20px 0;
+}
